@@ -1,34 +1,41 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
 function renderLicenseBadge(data) {
   const licenseInput = data.license
   let licenseBadge = ""
-  if (licenseInput === "none"){
+
+  if (licenseInput === "none") {
     return licenseBadge;
   }
-  if (licenseInput === "MIT"){
+  if (licenseInput === "MIT") {
     licenseBadge = "[![License](/)](/)";
     return licenseBadge;
   }
-  if (licenseInput === "Apache"){
+  if (licenseInput === "Apache") {
     licenseBadge = "[![License](/)](/)";
     return licenseBadge;
   }
-  if (licenseInput === "BDS 3-Clause"){
+  if (licenseInput === "BDS 3-Clause") {
     licenseBadge = "[![License](/)](/)";
     return licenseBadge;
   }
-  if (licenseInput === "Mozilla"){
+  if (licenseInput === "Mozilla") {
     licenseBadge = "[![License](/)](/)";
     return licenseBadge;
   }
 }
 
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(data) {
+  const licenseInput = data.license
+  
+  if (licenseInput === "none") {
+    return "" 
+  } else {
+    return `* [License](#license)`
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
